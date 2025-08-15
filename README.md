@@ -1,6 +1,21 @@
 # similarity-demo
 Similarity search demo intended for large-scale (1M+) Zooniverse image datasets, where a subset of images are Zooniverse subjects
 
+## Running
+
+To spin up the client/server on localhost:3000
+
+    cd frontend
+    npm run dev
+
+## Design Overview
+
+- `frontend` is a next.js app with both client and server components
+    - the server components query our database for similar galaxies
+    - the client components show the results as thumbnails
+- `builder` is a local script for uploading galaxies (representation vectors, image urls, coordinates) to our database
+- The database (Azure CosmosDB NoSQL) has fields with the image urls, and vector indices for the representation vectors and sky coordinates. 
+- The images themselves are already hosted on a Google Cloud bucket
 
 ## Building this
 
@@ -33,3 +48,5 @@ typescript, no eslint, no tailwind, yes router, no turbopack
 https://learn.microsoft.com/en-us/javascript/api/overview/azure/cosmos-readme?view=azure-node-latest
 
 npm install @azure/cosmos
+
+TODO use [css modules](https://nextjs.org/learn/dashboard-app/css-styling) or [bulma](https://bulma.io/) to style
