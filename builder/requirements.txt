@@ -1,0 +1,5 @@
+azure-cosmos
+pandas
+pyarrow
+numpy
+aiohttp
