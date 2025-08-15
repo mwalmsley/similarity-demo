@@ -16,6 +16,9 @@ def main():
     search_vector = example_row[pca_cols].astype(np.float32).values.tolist() # not squeezed
     print('search: ', example_row['image_url'].values[0])
 
+    print(search_vector)
+    exit()
+
     # c acts as the container name
     query = "SELECT TOP 3 c.image_url, c.object_id, VectorDistance(c.pca, [{}]) AS similarity_score " \
             "FROM c " \

@@ -23,3 +23,13 @@ I use the CosmosDB Python client to add data. [Quickstart](https://learn.microso
 
 
 CosmosDB Python client doesn't support bulk uploads but it does do async uploads. Example [here](https://stackoverflow.com/questions/73225265/how-to-insert-bulk-data-into-cosmos-db-in-python).
+
+
+npx create-next-app@latest frontend
+typescript, no eslint, no tailwind, yes router, no turbopack
+
+    npm run dev
+
+https://learn.microsoft.com/en-us/javascript/api/overview/azure/cosmos-readme?view=azure-node-latest
+
+npm install @azure/cosmos
